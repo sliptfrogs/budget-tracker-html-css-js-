@@ -23,7 +23,7 @@ const balanceCounter = (totalAmount) => {
     return counter;
   };
 };
-const balanceAdd = balanceCounter(listBalance.currentBalance);
+const balanceChange = balanceCounter(listBalance.currentBalance);
 
 const listLog = [
 ];
@@ -77,7 +77,7 @@ const myFunction = () => {
   }
 
   const id = idIncrease();
-  const balanceAfter = balanceAdd(amount, method);
+  const balanceAfter = balanceChange(amount, method);
 
 
 
