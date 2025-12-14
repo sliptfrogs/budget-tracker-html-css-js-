@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Flag CDN -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+        <!-- Ion-Icon -->
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </head>
+    <body>
+        <form action>
+            <h3>
+                Personal Budget Tracker
+            </h3>
+            <div class="box-transaction">
+                <label for>Total Enties</label>
+                <div class="total">
+                    <div class="flag">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+
+                    <span class="total-value" id="demo">
+                        0
+                    </span>
+                </div>
+                <label for>Current</label>
+                <div class="current">
+                    <div class="flag">
+                        <span class="fi fi-us"></span> USA
+                    </div>
+                    <span class="current-balance" id="balance">
+                        20.00
+                    </span>
+                </div>
+            </div>
+            <div class="form-content-container">
+                <div class="form-content">
+                    <div class="col">
+                        <label for>Amount</label>
+                        <input type="text" id="amount"
+                            placeholder="e.g. 50, 30">
+                    </div>
+                    <div class="col container">
+                        <!-- Radio buttons -->
+                        <input type="radio" name="tab" id="income" checked>
+                        <input type="radio" name="tab" id="expense">
+
+                        <!-- Toggle button -->
+                        <div class="toggle">
+                            <div class="indicator"></div>
+                            <label for="income">Income</label>
+                            <label for="expense">Expense</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for>Remark / Note</label>
+                        <input id="remark" type="text"
+                            placeholder="e.g. Glocery, Salary, Transport">
+                    </div>
+
+                    <div class="col-btn">
+                        <button type="button" onclick="myFunction()"
+                            id="btn-add">
+                            Add Entry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-container">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Amount</th>
+                        <th>Remark</th>
+                        <th>Date</th>
+                        <th>Balance After</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr class="empty-row">
+                        <td colspan="5"
+                            style="text-align:center; color: gray; padding: 30px 0;">
+                            <ion-icon name="trash-bin-outline"
+                                style="font-size: 28px;"></ion-icon>
+                            <br>
+                            No items yet
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+    <script src="./js.js"></script>
+</html>
