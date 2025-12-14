@@ -30,7 +30,7 @@ const listLog = [
 // Display Log
 const displayLogHistory = () => {
   let content = "";
-  listLog?.map((value, index) => {
+  listLog?.slice().reverse().map((value, index) => {
     content += `
                     <tr>
                         <td>
